@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#040a14">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="BLACKOUT: URATUJ WIEiK — interaktywna gra edukacyjna Wydziału Inżynierii Elektrycznej i Komputerowej Politechniki Krakowskiej. Uruchom obwód, rozkręć silnik i zaprogramuj mikrokontroler.">
+  <title>BLACKOUT: URATUJ WIEiK</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-scene="intro">
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <div id="app">
+    <header class="hud" id="hud">
+      <div class="hud-row">
+        <div class="hud-brand">
+          <img id="hudLogo" alt="" data-optional>
+          <div class="hud-label">
+            <span id="hudLabel">LABORATORIUM</span>
+            <b id="hudStatus" class="hud-status">OFFLINE</b>
+          </div>
+        </div>
+        <div class="hud-pct"><span id="hudPct">0</span><small>%</small></div>
+        <button id="muteBtn" class="icon-btn" type="button" aria-label="Wycisz dźwięk"></button>
+      </div>
+      <div class="hud-bar" id="hudBar" role="progressbar" aria-label="Postęp uruchamiania laboratorium" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="hud-fill" id="hudFill"></div>
+        <i style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i>
+      </div>
+      <div class="hud-steps" id="hudSteps">
+        <span data-s="circuit">OBWÓD</span>
+        <span data-s="motor">SILNIK</span>
+        <span data-s="mcu">MCU</span>
+        <span data-s="booth">STOISKO</span>
+      </div>
+    </header>
+
+    <main id="stage" class="stage"></main>
+  </div>
+
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+  <div id="sr" class="sr-only" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript">Ta gra wymaga włączonej obsługi JavaScript.</div>
+  </noscript>
+
+  <!-- Konfiguracja i treści -->
+  <script src="config.js"></script>
+  <script src="js/texts.js"></script>
+  <!-- Rdzeń -->
+  <script src="js/core/util.js"></script>
+  <script src="js/core/state.js"></script>
+  <script src="js/core/audio.js"></script>
+  <script src="js/core/background.js"></script>
+  <script src="js/core/confetti.js"></script>
+  <script src="js/core/pdf.js"></script>
+  <script src="js/core/certificate.js"></script>
+  <script src="js/core/app.js"></script>
+  <!-- Sceny -->
+  <script src="js/scenes/intro.js"></script>
+  <script src="js/scenes/matura.js"></script>
+  <script src="js/scenes/circuit.js"></script>
+  <script src="js/scenes/motor.js"></script>
+  <script src="js/scenes/mcu.js"></script>
+  <script src="js/scenes/booth.js"></script>
+  <script src="js/scenes/launch.js"></script>
+  <script src="js/scenes/finish.js"></script>
+  <script src="js/scenes/study.js"></script>
+  <!-- Start -->
+  <script src="js/main.js"></script>
+</body>
+</html>

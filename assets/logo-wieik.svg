@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="276" height="64" viewBox="0 0 276 64">
+  <!-- Neutralny znak zastępczy. Podmień na oficjalne logo wydziału (config.js → logo). -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0b2647" stroke="#2de2ff" stroke-width="3"/>
+  <path d="M36 10 18 36h12l-3 18 19-28H34z" fill="#2de2ff"/>
+  <text x="74" y="38" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#2de2ff" letter-spacing="1">WIEiK</text>
+  <text x="75" y="55" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#7fa6d6" letter-spacing="1.6">POLITECHNIKA KRAKOWSKA</text>
+</svg>
