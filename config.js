@@ -27,7 +27,7 @@ window.BW_CONFIG = {
 
   /* Publiczny adres gry — używany przez narzędzie qr.html do wygenerowania kodu QR.
      Puste = qr.html podpowie bieżący adres strony. */
-  publicUrl: "",
+  publicUrl: "https://maciejgibas.github.io/blackout-wieik/",
 
   /* Nagroda na stoisku */
   prize: {
